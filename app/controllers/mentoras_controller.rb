@@ -28,6 +28,14 @@ class MentorasController < ApplicationController
     redirect_to @mentora
   end
 
+  def destroy
+    @mentora = Mentora.find(params[:id])
+    puts "deletando a #{@mentora}"
+    @mentora.destroy!
+
+    redirect_to mentoras_path
+  end
+
   private
 
   def mentora_params
