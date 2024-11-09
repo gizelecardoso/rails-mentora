@@ -1,0 +1,19 @@
+<h1>Listing mentoras</h1>
+
+<table>
+  <tr>
+  <th>Nome</th>
+  <th>Contato</th>
+  <th>Habilidades</th>
+  </tr>
+
+  <% @mentoras.each do |mentora| %>
+    <tr>
+      <td><%=mentora.nome %></td>
+      <td><%=mentora.contato %></td>
+      <td><%=mentora.habilidades %></td>
+    </tr>
+  <% end %>
+
+  <td><%=link_to 'New', new_mentora_path%></td>
+</table>
