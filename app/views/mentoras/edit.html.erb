@@ -1,0 +1,18 @@
+<%= form_with model: @mentora do |f| %>
+  <p>
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  <p>
+  <p>
+    <%= f.label :contato %><br>
+    <%= f.text_field :contato %>
+  <p>
+  <p>
+    <%= f.label :habilidades %><br>
+    <%= f.text_field :habilidades %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end%>
+
+<%= link_to 'Back', mentoras_path %>

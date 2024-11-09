@@ -17,6 +17,17 @@ class MentorasController < ApplicationController
     redirect_to @mentora
   end
 
+  def edit
+    @mentora = Mentora.find(params[:id])
+  end
+
+  def update
+    @mentora = Mentora.find(params[:id])
+    @mentora.update(mentora_params)
+
+    redirect_to @mentora
+  end
+
   private
 
   def mentora_params
